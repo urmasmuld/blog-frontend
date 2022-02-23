@@ -1,23 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import * as React from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Index from './views';
+import Header from './components/header/Header';
+
+import ProfileView from './views/users/profileView';
+import PostsView from './views/posts/postsView';
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">    
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
+        <Routes>
+          <Route path="/" element={Index()}/>
+          <Route path="/users" element={ProfileView()}/>
+          <Route path="/posts" element={PostsView()}/>
+        </Routes>
       </header>
     </div>
   );

@@ -1,0 +1,9 @@
+.cardContainer{
+    border-radius: 10px;
+    background-color: #FFF;
+    color: #7B8591;
+}
+
+.cardContainer h3 {
+    color: #303336;
+}
